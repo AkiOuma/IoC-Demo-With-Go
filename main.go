@@ -10,6 +10,8 @@ func main() {
 	container := ioc.NewContainer()
 	target := sample.NewTarget()
 	container.BindInstance("a", sample.NewA("ABC"))
-	container.Injection(target)
+	if err := container.Injection(target); err != nil {
+		return
+	}
 	fmt.Println(target.ContentOfA())
 }

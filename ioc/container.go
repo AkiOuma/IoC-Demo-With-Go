@@ -11,9 +11,6 @@ type Container struct {
 	instances map[string]interface{}
 }
 
-// 构造函数类型
-// type constructor func(param ...interface{}) interface{}
-
 // 实例化容器
 func NewContainer() *Container {
 	return &Container{instances: make(map[string]interface{})}
